@@ -1,0 +1,12 @@
+#:schema ../node_modules/wrangler/config-schema.json
+name = "react-rental-agency"
+main = "./worker/index.ts"
+compatibility_date = "2025-11-24"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+dev = { port = 9001 }
+
+[[d1_databases]]
+binding = "DB"
+database_name = "react-rental-agency"
+database_id = "DATABASE_ID_HERE"      # <-- Update with your D1 database ID

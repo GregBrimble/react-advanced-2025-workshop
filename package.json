@@ -1,0 +1,11 @@
+{
+	"name": "react-rental-agency",
+	"private": true,
+	"type": "module",
+	"workspaces": [
+		"./lesson-1/",
+		"./lesson-2/",
+		"./lesson-3/",
+		"./lesson-4/"
+	]
+}

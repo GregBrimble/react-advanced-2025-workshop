@@ -1,0 +1,70 @@
+{
+	"name": "@react-rental-agency/lesson-1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"apply-migrations": "cross-env CI=true wrangler d1 migrations apply DB --local --persist-to=../.wrangler/state/",
+		"build": "vite build",
+		"check": "concurrently \"npm:check:*\" --group",
+		"check:format": "npm run prettier -- --check",
+		"check:lint": "npm run eslint",
+		"precheck:types": "npm run generate-types",
+		"check:types": "tsc -b",
+		"deploy": "wrangler deploy",
+		"predev": "npm run apply-migrations",
+		"dev": "vite",
+		"eslint": "eslint .",
+		"fix": "concurrently \"npm:fix:*\" --group",
+		"fix:format": "npm run prettier -- --write",
+		"fix:lint": "npm run eslint -- --fix",
+		"generate-types": "wrangler types",
+		"prettier": "prettier . --ignore-path=../.gitignore --ignore-path=../.prettierignore",
+		"preview": "wrangler dev --persist-to=../.wrangler/state/"
+	},
+	"prettier": {
+		"plugins": [
+			"prettier-plugin-packagejson",
+			"@trivago/prettier-plugin-sort-imports",
+			"prettier-plugin-tailwindcss"
+		]
+	},
+	"overrides": {
+		"wrangler": "4.50.0"
+	},
+	"dependencies": {
+		"@fontsource-variable/inter": "5.2.8",
+		"@headlessui/react": "2.2.9",
+		"@heroicons/react": "2.2.0",
+		"clsx": "2.1.1",
+		"drizzle-orm": "0.44.7",
+		"motion": "12.23.24",
+		"react": "19.2.0",
+		"react-dom": "19.2.0",
+		"rsc-html-stream": "0.0.7",
+		"zod": "3.25.76"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "1.14.2",
+		"@eslint/compat": "2.0.0",
+		"@eslint/js": "9.39.1",
+		"@tailwindcss/vite": "4.1.17",
+		"@trivago/prettier-plugin-sort-imports": "6.0.0",
+		"@types/node": "24.10.1",
+		"@types/react": "19.2.6",
+		"@types/react-dom": "19.2.3",
+		"@vitejs/plugin-react": "5.1.1",
+		"@vitejs/plugin-rsc": "0.5.1",
+		"concurrently": "9.2.1",
+		"cross-env": "10.1.0",
+		"drizzle-kit": "0.31.7",
+		"eslint": "9.39.1",
+		"prettier": "3.6.2",
+		"prettier-plugin-packagejson": "2.5.19",
+		"prettier-plugin-tailwindcss": "0.7.1",
+		"tailwindcss": "4.1.17",
+		"typescript": "5.9.3",
+		"typescript-eslint": "8.47.0",
+		"vite": "7.2.4",
+		"wrangler": "4.50.0"
+	}
+}

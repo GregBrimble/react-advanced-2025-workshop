@@ -1,0 +1,17 @@
+#:schema ../node_modules/wrangler/config-schema.json
+name = "react-rental-agency"
+main = "./worker/index.ts"
+compatibility_date = "2025-11-24"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+dev = { port = 9003 }
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "react-rental-agency"
+database_id = "DATABASE_ID_HERE"
+# Don't worry about fixing the `database_id` again.
+# I've put in a bit of magic to infer automatically which database to use after lesson 1.

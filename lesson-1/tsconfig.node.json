@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"allowImportingTsExtensions": true,
+		"allowJs": true,
+		"erasableSyntaxOnly": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"lib": ["ESNext"],
+		"module": "preserve",
+		"moduleDetection": "force",
+		"noEmit": true,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "esnext",
+		"verbatimModuleSyntax": true
+	},
+	"include": ["./vite.config.ts", "./eslint.config.mjs"]
+}
